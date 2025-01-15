@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Solicitud de Empleo (4 páginas, dimensión manual)</title>
+    <style>
+        /* Estilos generales */
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 1000px;
+            /* Un ancho grande para tu contenido */
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px 30px;
+        }
+
+        .section-title {
+            background-color: #4d4d4d;
+            color: #ffffff;
+            padding: 8px 10px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-right: 20px;
+            margin-bottom: 10px;
+        }
+
+        .form-group.wide {
+            flex: 1;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 4px;
+            color: #333;
+        }
+
+        input,
+        select,
+        textarea {
+            padding: 6px;
+            font-size: 0.9rem;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            width: 250px;
+        }
+
+        .wide input,
+        .wide textarea {
+            width: 100%;
+        }
+
+        .btn-generate {
+            background-color: #444;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 20px auto;
+            font-size: 1rem;
+            border-radius: 3px;
+            display: block;
+        }
+
+        .btn-generate:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PÁGINA 1 -->
+    <div id="page1">
+
+
+        <div class="container">
+            <h2>Solicitud de Empleo</h2>
+
+            <div class="section-title">Datos Personales</div>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <label>Nombre Completo:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group">
+                    <label>Tel. Casa:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group">
+                    <label>Tel. Casa:</label>
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <label>Dirección:</label>
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Fecha de Nacimiento:</label>
+                    <input type="date" />
+                </div>
+                <div class="form-group">
+                    <label>Lugar de Nacimiento:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group">
+                    <label>Estado Civil:</label>
+                    <select class="sel">
+  <option value="" disabled selected>Selecciona una opción</option>
+  <option value="1">Casado</option>
+  <option value="2">Soltero</option>
+    <option value="3">Divorciado</option>
+  <option value="4">Viudo</option>
+</select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>DPI:</label>
+                    <input type="number" />
+                </div>
+                <div class="form-group">
+                    <label>NIT:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group">
+                    <label>Edad:</label>
+                    <input type="number" />
+                </div>
+                <div class="form-group">
+                    <label>No. IGSS:</label>
+                    <input type="number" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <label>Profesión u Oficio:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group wide">
+                    <label>Puesto de Interés:</label>
+                    <input type="text" />
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Pretensión Salarial:</label>
+                    <input type="number" />
+                </div>
+                <div class="form-group">
+                    <label>Licencia de Conducir:</label>
+                    <select class="sel">
+  <option value="" disabled selected>Selecciona una opción</option>
+  <option value="1">Si</option>
+  <option value="2">No</option>
+</select>
+                </div>
+                <div class="form-group">
+                    <label>Tipo de Licencia:</label>
+                    <select class="sel">
+  <option value="" disabled selected>Selecciona una opción</option>
+  <option value="1">A</option>
+  <option value="2">B</option>
+  <option value="3">C</option>
+  <option value="4">M</option>
+  <option value="5">E</option>
+  </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Carga Familiar:</label>
+                    <select class="sel">
+  <option value="" disabled selected>Selecciona una opción</option>
+  <option value="1">Si</option>
+  <option value="2">No</option>
+</select>
+                </div>
+                <div class="form-group">
+                    <label>Cantidad de familia a su Cargo:</label>
+                    <input type="number" />
+                </div>
+                <div class="form-group">
+                    <label>Contacto Emergencia (Nombre):</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group">
+                    <label>Tel. Emergencia:</label>
+                    <input type="number" />
+                </div>
+                <div class="form-group">
+                    <label>Parentesco:</label>
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <label>Especifique si tiene Alergias:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group">
+                    <label>Tipo de Sangre:</label>
+                    <select class="sel">
+  <option value="" disabled selected>Selecciona una opción</option>
+  <option value="1">A positivo (A+)</option>
+  <option value="2">A negativo (A-)</option>
+  <option value="3">B positivo (B+)</option>
+  <option value="4">B negativo (B-)</option>
+  <option value="5">AB positivo (AB+)</option>
+  <option value="6">AB negativo (AB-)</option>
+  <option value="7">O positivo (O+)</option>
+  <option value="8">O negativo (O-)</option>
+  </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>¿Familiar Labora en Donovan?:</label>
+                    <select>
+            <option>No</option>
+            <option>Sí</option>
+          </select>
+                </div>
+                <div class="form-group wide">
+                    <label>¿Nombre del Familiar en Donovan?:</label>
+                    <input type="text" />
+                </div>
+            </div>
+
+
+            <!-- DATOS FAMILIARES -->
+            <div class="section-title">Datos Familiares</div>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <label>Datos del Padre:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group">
+                    <label>Nacimiento:</label>
+                    <input type="date" />
+                </div>
+                <div class="form-group">
+                    <label>Teléfono:</label>
+                    <input type="number" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <label>Datos de la Madre:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group">
+                    <label>Nacimiento:</label>
+                    <input type="date" />
+                </div>
+                <div class="form-group">
+                    <label>Teléfono:</label>
+                    <input type="number" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <label>Datos del Cónyuge:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group">
+                    <label>Nacimiento:</label>
+                    <input type="date" />
+                </div>
+                <div class="form-group">
+                    <label>Teléfono:</label>
+                    <input type="number" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <label>Datos Primer Hijo:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group">
+                    <label>Nacimiento:</label>
+                    <input type="date" />
+                </div>
+                <div class="form-group">
+                    <label>Teléfono:</label>
+                    <input type="number" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <label>Datos Segundo Hijo:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group">
+                    <label>Nacimiento:</label>
+                    <input type="date" />
+                </div>
+                <div class="form-group">
+                    <label>Teléfono:</label>
+                    <input type="number" />
+                </div>
+            </div>
+
+            <!-- Agrega más campos según necesidad -->
+        </div>
+    </div>
+
+    <!-- PÁGINA 2 -->
+    <div id="page2">
+        <div class="container">
+            <h2></h2>
+            <!-- Ejemplo -->
+
+            <div class="section-title">Nivel Educativo</div>
+            <!-- Ejemplo de campos -->
+            <div class="form-row">
+                <div class="form-group wide">
+                    <label>Lugar en donde cursó Primaria:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group">
+                    <label>Año Inicio:</label>
+                    <input type="number" />
+                </div>
+                <div class="form-group">
+                    <label>Año fin:</label>
+                    <input type="number" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <label>Lugar en donde cursó Básicos:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group">
+                    <label>Año Inicio:</label>
+                    <input type="number" />
+                </div>
+                <div class="form-group">
+                    <label>Año fin:</label>
+                    <input type="number" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <label>Lugar en donde cursó Diversificado:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group">
+                    <label>Año Inicio:</label>
+                    <input type="number" />
+                </div>
+                <div class="form-group">
+                    <label>Año fin:</label>
+                    <input type="number" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <label>Título Diversificado:</label>
+                    <input type="text" />
+                </div>
+            </div>
+            <!-- Universidad -->
+            <div class="form-row">
+                <div class="form-group wide">
+                    <label>Lugar en donde cursó la Universidad:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group">
+                    <label>Año Inicio:</label>
+                    <input type="number" />
+                </div>
+                <div class="form-group">
+                    <label>Año fin:</label>
+                    <input type="number" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <label>Título Universitario:</label>
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>¿Está Estudiando?:</label>
+                    <select class="sel">
+  <option value="" disabled selected>Selecciona una opción</option>
+  <option value="1">Si</option>
+  <option value="2">No</option>
+</select>
+                </div>
+                <div class="form-group">
+                    <label>Nivel:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group">
+                    <label>Horario:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group">
+                    <label>Año fin (previsto):</label>
+                    <input type="number" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <label>¿Qué Estudia?:</label>
+                    <input type="text" />
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section-title">Datos Socioeconómicos</div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Cuanto aporta en casa:</label>
+                    <input type="number" />
+                </div>
+                <div class="form-group wide">
+                    <label>Si usted es soltero, ¿con quién vive?</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group wide">
+                    <label>Tipo de vivienda:</label>
+                    <select class="sel">
+  <option value="" disabled selected>Selecciona una opción</option>
+  <option value="1">Vivienda Alquilada</option>
+  <option value="2">Vivienda Propia</option>
+    <option value="1">Vivienda Familiar</option>
+  <option value="2">Vivienda Hipotecada</option>
+    <option value="1">Vivienda en proceso de pago</option>
+
+</select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Propiedad valorada en:</label>
+                    <input type="number" />
+                </div>
+                <div class="form-group">
+                    <label>Valor por alquiler:</label>
+                    <input type="number" />
+                </div>
+                <div class="form-group">
+                    <label>¿Tiene vehículo?:</label>
+                    <select class="sel">
+  <option value="" disabled selected>Selecciona una opción</option>
+  <option value="1">Si</option>
+  <option value="2">No</option>
+        </select>
+                </div>
+                <div class="form-group">
+                    <label>Marca:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group">
+                    <label>Modelo:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group">
+                    <label>Placa:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group">
+                    <label>Seguro vehicular (lugar):</label>
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>¿Tiene otro Ingresos?:</label>
+                    <select class="sel">
+  <option value="" disabled selected>Selecciona una opción</option>
+  <option value="1">Si</option>
+  <option value="2">No</option>
+        </select>
+                </div>
+                <div class="form-group">
+                    <label>Valor otros ingresos:</label>
+                    <input type="number" />
+                </div>
+                <div class="form-group wide">
+                    <label>Detalle otros ingresos:</label>
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>¿Tiene deudas?:</label>
+                    <select class="sel">
+  <option value="" disabled selected>Selecciona una opción</option>
+  <option value="1">Si</option>
+  <option value="2">No</option>
+        </select>
+                </div>
+                <div class="form-group">
+                    <label>Monto adeudado:</label>
+                    <input type="number" />
+                </div>
+                <div class="form-group wide">
+                    <label>Motivo de la deuda:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group wide">
+                    <label>Entidad de crédito:</label>
+                    <input type="text" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- PÁGINA 3 -->
+    <div id="page3">
+        <div class="container">
+            <div class="section-title">Experiencia Laboral</div>
+            <h4>Empresa 1:</h4>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <label>Dirección:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group">
+                    <label>Teléfono:</label>
+                    <input type="number" />
+                </div>
+                <div class="form-group">
+                    <label>Puesto:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group">
+                    <label>Puesto del Jefe:</label>
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Fecha de Ingreso:</label>
+                    <input type="date" />
+                </div>
+                <div class="form-group">
+                    <label>Fecha de Retiro:</label>
+                    <input type="date" />
+                </div>
+                <div class="form-group">
+                    <label>Salario Inicial:</label>
+                    <input type="number" />
+                </div>
+                <div class="form-group">
+                    <label>Salario Final:</label>
+                    <input type="number" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <label>Mayor Logro obtenido:</label>
+                    <textarea></textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <label>Principales atribuciones:</label>
+                    <textarea></textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Motivo de retiro:</label>
+
+                    <select class="sel">
+  <option value="" disabled selected>Selecciona una opción</option>
+  <option value="1">Despido</option>
+  <option value="2">Renuncia</option>
+    <option value="3">Plaza Temporal</option>
+  <option value="4">Abandono</option>
+    <option value="5">Empleo Actual</option>
+        </select>
+
+                </div>
+                <div class="form-group wide">
+                    <label>Especifique:</label>
+                    <input type="text" />
+                </div>
+            </div>
+
+            <!-- Empresa 2 -->
+            <h4>Empresa 2:</h4>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <label>Dirección:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group">
+                    <label>Teléfono:</label>
+                    <input type="number" />
+                </div>
+                <div class="form-group">
+                    <label>Puesto:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group">
+                    <label>Puesto del Jefe:</label>
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Fecha de Ingreso:</label>
+                    <input type="date" />
+                </div>
+                <div class="form-group">
+                    <label>Fecha de Retiro:</label>
+                    <input type="date" />
+                </div>
+                <div class="form-group">
+                    <label>Salario Inicial:</label>
+                    <input type="number" />
+                </div>
+                <div class="form-group">
+                    <label>Salario Final:</label>
+                    <input type="number" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <label>Mayor Logro obtenido:</label>
+                    <textarea></textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <label>Principales atribuciones:</label>
+                    <textarea></textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Motivo de retiro:</label>
+                    <select class="sel">
+  <option value="" disabled selected>Selecciona una opción</option>
+  <option value="1">Despido</option>
+  <option value="2">Renuncia</option>
+    <option value="3">Plaza Temporal</option>
+  <option value="4">Abandono</option>
+    <option value="5">Empleo Actual</option>
+        </select>
+
+                </div>
+                <div class="form-group wide">
+                    <label>Especifique:</label>
+                    <input type="text" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- PÁGINA 4 -->
+    <div id="page4">
+        <div class="container">
+            <h2></h2>
+            <!-- Ejemplo -->
+            <h4>Empresa 3:</h4>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <label>Dirección:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group">
+                    <label>Teléfono:</label>
+                    <input type="number" />
+                </div>
+                <div class="form-group">
+                    <label>Puesto:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group">
+                    <label>Puesto del Jefe:</label>
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Fecha de Ingreso:</label>
+                    <input type="date" />
+                </div>
+                <div class="form-group">
+                    <label>Fecha de Retiro:</label>
+                    <input type="date" />
+                </div>
+                <div class="form-group">
+                    <label>Salario Inicial:</label>
+                    <input type="numbert" />
+                </div>
+                <div class="form-group">
+                    <label>Salario Final:</label>
+                    <input type="number" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <label>Mayor Logro obtenido:</label>
+                    <textarea></textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <label>Principales atribuciones:</label>
+                    <textarea></textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Motivo de retiro:</label>
+                    <select class="sel">
+  <option value="" disabled selected>Selecciona una opción</option>
+  <option value="1">Despido</option>
+  <option value="2">Renuncia</option>
+    <option value="3">Plaza Temporal</option>
+  <option value="4">Abandono</option>
+    <option value="5">Empleo Actual</option>
+        </select>
+                </div>
+                <div class="form-group wide">
+                    <label>Especifique:</label>
+                    <input type="text" />
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- DECLARACIÓN LEGAL -->
+            <div class="form-row">
+                <div class="form-group wide" style="text-align:center;">
+                    <label>                Declaración Legal:</label>
+                </div>
+
+                <br>
+                <div class="form-row" style="text-align:center;">
+
+                    <p>
+                        Declaro que los datos aquí consignados son verdaderos y correctos. Autorizo voluntariamente que la información recopilada y/o proporcionada por entidades públicas o privadas y la generada de relaciones contractuales, crediticias o comerciales, sea reportada
+                        a centrales de riesgos o burós de crédito para ser tratada, almacenada o transferida; y autorizo expresamente a las entidades que prestan servicios de información, centrales de riesgos y burós de crédito a recopilar, difundir o
+                        comercializar reportes o estudios que contengan información sobre mi persona. Expresamente acepto la responsabilidad por cualquier información incorrecta o falsa proporcionada que podrá ser motivo para la desaprobación de esta
+                        solicitud o para mi remoción después de haber sido aceptado como trabajador, sin responsabilidad para la empresa, conforme a la ley. Acepto que esta solicitud no compromete a la empresa a contratar mis servicios. Conozco y acepto
+                        que la cesión de mis datos de carácter público personal están protegidos por la legislación nacional vigente y mantengo los derechos de acceso a los mismos.</p>
+                    <br><br><br><br><br>
+                    <div class="form-group wide"><br><br><br><br><br><br><br><br>
+                        <p>___________________________________________</p>
+                        <p>Lugar y fecha</p>
+                    </div>
+                    <div class="form-group wide"><br><br><br><br><br><br><br><br>
+                        <p>___________________________________________</p>
+                        <p>Firma</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botón para generar PDF -->
+        <button type="button" class="btn-generate" id="btnPDF">Descargar PDF</button>
+
+        <!-- Librerías -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+       <script>
+  const { jsPDF } = window.jspdf;
+
+  async function captureAndAddPage(divId, pdf, addNewPage) {
+    const element = document.getElementById(divId);
+
+    // 1. Reducí la escala
+    const canvas = await html2canvas(element, { scale: 1.5 });
+    
+    // 2. Obtené las dimensiones reales del canvas
+    const realWidth = canvas.width;
+    const realHeight = canvas.height;
+    const imgData = canvas.toDataURL("image/jpeg", 1); // Pasar a JPEG con 90% de calidad
+
+    // Dimensiones de la página en píxeles
+    const pageWidth = pdf.internal.pageSize.getWidth();
+    const pageHeight = pdf.internal.pageSize.getHeight();
+
+    // Acá ajustás cuán ancho querés que sea el contenido en el PDF
+    const maxWidth = 800; // Por ejemplo, 800 px
+    const ratio = realHeight / realWidth;
+    let finalWidth = maxWidth;
+    let finalHeight = finalWidth * ratio;
+
+    // Si excede en altura, ajustalo
+    if (finalHeight > (pageHeight - 20)) {
+      finalHeight = pageHeight - 20;
+      finalWidth = finalHeight / ratio;
+    }
+
+    const xPos = (pageWidth - finalWidth) / 2;
+    const yPos = 10; // un pequeño margen
+
+    if (addNewPage) {
+      pdf.addPage();
+    }
+
+    // 3. Agregar imagen en formato JPEG con compresión
+    pdf.addImage(
+      imgData,
+      "JPEG",
+      xPos,
+      yPos,
+      finalWidth,
+      finalHeight,
+      "",
+      "FAST"   // compresión FAST
+      // Podrías probar "MEDIUM" o "SLOW" en algunas versiones
+    );
+  }
+
+  document.getElementById("btnPDF").addEventListener("click", async () => {
+    const pdf = new jsPDF({
+      orientation: 'p',
+      unit: 'px',
+      format: 'a4'
+    });
+
+    await captureAndAddPage("page1", pdf, false);
+    await captureAndAddPage("page2", pdf, true);
+    await captureAndAddPage("page3", pdf, true);
+    await captureAndAddPage("page4", pdf, true);
+
+    pdf.save("solicitud_empleo_dim_manual.pdf");
+  });
+</script>
+
+</body>
+
+</html>
