@@ -113,14 +113,14 @@
 
       <header class="header">
         <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxt4Pw7IB23fVocu04TxVOiAeSpK8WfuJK6s3yn7otfOPG0YF3NjGSnWOrPN7hRIijmIU_lmQVNyiHzShRQfd09GX4THDL_TZvTPX1ZEn9dMF7Ys5zBe7u8_peY5oGH_781lW0nGqGKUA9iMnesBQwVdmkHo0Vlk9oQdBemFb61lxQf3-r9D6lUSHtS0mD/s3108/Logo%20corporativo%20Pubicidad@300x.png">
-        <h2 class="titulo">Solicitud de Empleo</h2>
+        <h2 class="titulo">Solicitud de empleo Laboratorios Donovan Werke</h2>
       </header>
 
       <div class="section-title">Datos Personales</div>
       <div class="form-row">
         <div class="form-group wide">
           <label>Nombre completo:</label>
-          <input type="text" />
+          <input type="text" id="nombreCompleto" />
         </div>
         <div class="form-group">
           <label>Celular:</label>
@@ -900,8 +900,15 @@
 
     // Renderiza todo el contenido que esté dentro de #contenidoTotal
     pdf.html(document.getElementById('contenidoTotal'), {
-      callback: (doc) => doc.save('solicitud_empleo_texto.pdf'),
-      // Ajusta según tus preferencias de escala y márgenes:
+      callback: (doc) => {
+        // 1. Toma el valor que el usuario ingresó
+        const nombre = document.getElementById('nombreCompleto').value.trim() || 'SinNombre';
+        // 2. Forma el nombre de archivo
+        const nombreArchivo = `Solicitud de empleo - ${nombre}.pdf`;
+        // 3. Guarda el PDF con ese nombre
+        doc.save(nombreArchivo);
+      },
+      // Opciones de html2canvas...
       margin: [0, 0, 0, -265],
       html2canvas: {
         scale: 0.6,
