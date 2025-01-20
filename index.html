@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -886,7 +887,7 @@
 </div> <!-- Fin #contenidoTotal -->
 
 <!-- Botón para generar PDF -->
-<button type="button" class="btn-generate" id="btnPDF">Descargar PDF</button>
+<button type="button" class="btn-generate" id="btnPDF">Descargar PDF  (Nota: el zoom de su navegador debe ser 100%)</button>
 
 <script>
   const { jsPDF } = window.jspdf;
@@ -900,21 +901,27 @@
 
     // Renderiza todo el contenido que esté dentro de #contenidoTotal
     pdf.html(document.getElementById('contenidoTotal'), {
-      callback: (doc) => {
-        // 1. Toma el valor que el usuario ingresó
-        const nombre = document.getElementById('nombreCompleto').value.trim() || 'SinNombre';
-        // 2. Forma el nombre de archivo
-        const nombreArchivo = `Solicitud de empleo - ${nombre}.pdf`;
-        // 3. Guarda el PDF con ese nombre
-        doc.save(nombreArchivo);
-      },
-      // Opciones de html2canvas...
-      margin: [0, 0, 0, -265],
-      html2canvas: {
-        scale: 0.6,
-        useCORS: true
-      }
-    });
+  callback: (doc) => {
+    const nombre = document.getElementById('nombreCompleto').value.trim() || 'SinNombre';
+    doc.save(`Solicitud de empleo - ${nombre}.pdf`);
+  },
+  // Se le dice a html2canvas que “vea” 900px,
+  // pero renderice todo al 0.6 para el PDF final
+  width: 900,
+  windowWidth: 900,
+  html2canvas: {
+    useCORS: true,
+    scale: 0.6
+  },
+  
+    margin: [0, 0, 0, 35]
+  
+  
+  
+  
+});
+
+
   });
 </script>
 
